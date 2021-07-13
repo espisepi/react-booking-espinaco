@@ -1,0 +1,38 @@
+{
+    "reservations": [
+        {
+          "date": "2021-07-11T09:00:00",
+          "table": "idTable1",
+          "name": "Juan Reserva",
+          "phone": "622121212",
+          "email": "juan@gmail.com",
+          "id":"idReservation1"
+        }
+    ],
+    "tables": [
+        {
+            "name": "table 1",
+            "capacity": 1,
+            "location": "",
+            "id": "idTable1"
+          },
+          {
+            "name": "table 2",
+            "capacity": 2,
+            "location": "",
+            "id": "idTable2"
+          },
+          {
+            "name": "table 3",
+            "capacity": 3,
+            "location": "",
+            "id": "idTable3"
+          },
+          {
+            "name": "table 4",
+            "capacity": 4,
+            "location": "",
+            "id": "idTable4"
+          }
+    ]
+}
