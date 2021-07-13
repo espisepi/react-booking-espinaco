@@ -1,9 +1,10 @@
 import React from 'react';
+import AppReservation from './modules/reservation/AppReservation';
 
 function App() {
   return (
     <div className="App">
-      <h1>HELLO WORLD</h1>
+      <AppReservation />
     </div>
   );
 }
