@@ -1,9 +1,10 @@
 import React from 'react'
+import AppRouter from './main/routers/AppRouter'
 
 const AppReservation = props => {
     return (
     <div className="App-reservation">
-      <h1>HELLO WORLD</h1>
+      <AppRouter />
     </div>
     )
 }
