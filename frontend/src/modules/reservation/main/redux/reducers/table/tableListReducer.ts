@@ -1,5 +1,9 @@
-import { TableListState, Table, CustomAction } from "../../../interfaces/Interfaces";
-import { TABLE_LIST_FAIL, TABLE_LIST_REQUEST, TABLE_LIST_SUCCESS } from '../types/tableTypes';
+import { TableListState, Table, CustomAction } from "../../../../interfaces/Interfaces";
+import { 
+    TABLE_LIST_REQUEST,
+    TABLE_LIST_SUCCESS,
+    TABLE_LIST_FAIL,
+} from '../../types/tableTypes';
 
 
 /** Table List State --------------------------------- */
@@ -8,7 +12,7 @@ const initialTableListState: TableListState = {
     error: undefined,
     list: []
 }
-export function tableListReducer( state: TableListState = initialTableListState, action: CustomAction ) {
+export default function tableListReducer( state: TableListState = initialTableListState, action: CustomAction ) {
     switch(action.type) {
         case TABLE_LIST_REQUEST:
             return {
@@ -32,3 +36,5 @@ export function tableListReducer( state: TableListState = initialTableListState,
             return state;
     }
 }
+
+/* */
