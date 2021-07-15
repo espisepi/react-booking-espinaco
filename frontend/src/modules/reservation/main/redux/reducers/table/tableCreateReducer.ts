@@ -3,6 +3,7 @@ import {
     TABLE_CREATE_REQUEST,
     TABLE_CREATE_SUCCESS,
     TABLE_CREATE_FAIL,
+    TABLE_CREATE_RESET,
 } from '../../types/tableTypes';
 
 
@@ -31,6 +32,10 @@ export default function tableCreateReducer( state: TableCreateState = initialSta
                 table: undefined,
                 loading: false,
                 error: action.payload as Error,
+            }
+        case TABLE_CREATE_RESET:
+            return {
+                ...initialState
             }
         default:
             return state;

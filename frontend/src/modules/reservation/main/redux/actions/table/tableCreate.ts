@@ -1,7 +1,7 @@
-import { TABLE_CREATE_FAIL, TABLE_CREATE_REQUEST, TABLE_CREATE_SUCCESS } from "../../types/tableTypes"
+import { TABLE_CREATE_FAIL, TABLE_CREATE_REQUEST, TABLE_CREATE_SUCCESS, TABLE_CREATE_RESET } from "../../types/tableTypes"
 import * as tableService from '../../../services/tableService'
 import { TableApi } from "../../../../interfaces"
-import { Dispatch, Store } from "redux"
+import { Dispatch } from "redux"
 import tableList from './tableList'
 
 // Action Creators ----------------------
@@ -23,6 +23,11 @@ const tableCreateFail = (error: Error) => {
         payload: error
     }
 }
+const tableCreateReset = () => {
+    return {
+        type: TABLE_CREATE_RESET
+    }
+}
 
 
 // Side Effects -------------------------
@@ -32,6 +37,8 @@ export const tableCreate = (table: TableApi) => async(dispatch: Dispatch) => {
         dispatch( tableCreateRequest() )
         const tableCreated = await tableService.createTable(table);
         dispatch( tableCreateSuccess(tableCreated) );
+        dispatch( tableCreateReset() );
+
         dispatch( tableList() as any );
     } catch (e) {
         dispatch( tableCreateFail(e) )

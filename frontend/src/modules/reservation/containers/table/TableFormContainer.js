@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 // Redux
 import { useSelector, useDispatch } from 'react-redux'
@@ -24,9 +24,11 @@ const TableFormContainer = () => {
 
 
     // Rest of logic -----------------
-
-    const table = tableCreateForm || defaultTableCreate;
-    const [ form, setForm ] = useState(table);
+    const [ form, setForm ] = useState(defaultTableCreate);
+    useEffect(()=>{
+        const table = tableCreateForm || defaultTableCreate;
+        setForm(table)
+    },[tableCreateForm])
 
     const handleSubmit = (e) => {
         if(form.id) {
