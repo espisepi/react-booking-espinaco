@@ -1,4 +1,4 @@
-import { TableListState, Table, CustomAction } from "../../../../interfaces/Interfaces";
+import { TableListState, Table, Action } from "../../../../interfaces";
 import { 
     TABLE_LIST_REQUEST,
     TABLE_LIST_SUCCESS,
@@ -7,12 +7,13 @@ import {
 
 
 /** Table List State --------------------------------- */
-const initialTableListState: TableListState = {
+const initialState: TableListState = {
+    list: [],
     loading: false,
-    error: undefined,
-    list: []
+    success: undefined,
+    error: undefined
 }
-export default function tableListReducer( state: TableListState = initialTableListState, action: CustomAction ) {
+export default function tableListReducer( state: TableListState = initialState, action: Action ) {
     switch(action.type) {
         case TABLE_LIST_REQUEST:
             return {
