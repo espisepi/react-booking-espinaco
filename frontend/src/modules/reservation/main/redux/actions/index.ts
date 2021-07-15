@@ -1,6 +1,7 @@
-import tableList from "./table/tableList";
+import { tableList, tableCreate } from "./table";
 
 
 export {
-    tableList
+    tableList,
+    tableCreate
 }

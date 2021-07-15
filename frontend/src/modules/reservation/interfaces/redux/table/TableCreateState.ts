@@ -1,8 +1,7 @@
 import TableApi from '../../table/Table'
 
 export default interface TableCreateState {
-    table: TableApi;
+    table?: TableApi;
     loading: Boolean;
-    success?: Boolean;
     error?: Error;
 }

@@ -10,3 +10,22 @@ export const getTables = async () => {
         console.error(e);
     }
 }
+
+export const createTable = async ( table: TableApi ) => {
+    try {
+        const res = await save(table)
+        return res;
+    } catch (e) {
+        console.error(e);
+    }
+}
+
+export const save = async ( table: TableApi ) => {
+    try {
+        const resFetch = await fetchWithoutToken(`tables`, 'POST', table );
+        const res = await resFetch.json();
+        return res;
+    } catch (e) {
+        console.error(e);
+    }
+}
