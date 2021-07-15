@@ -13,13 +13,6 @@ export interface Table {
     reservation?: Reservation;
 }
 
-export interface TableState {
-    list: Array<Table>;
-    active?: Table;
-    loading: Boolean;
-    error?: Error;
-}
-
 export interface Search {
     date: Date;
     time: String; // "09:00" || "10:00" || "11:00" ...
@@ -38,3 +31,14 @@ export interface CustomAction {
     type: String,
     payload: any
 }
+
+
+// Redux State ---------------------------
+
+export interface TableListState {
+    list: Array<Table>;
+    loading: Boolean;
+    error?: Error;
+}
+
+// export interface TableListState, TableCreateState, TableUpdateState, TableDeleteState

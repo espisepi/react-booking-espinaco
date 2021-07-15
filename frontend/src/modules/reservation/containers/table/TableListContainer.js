@@ -8,7 +8,7 @@ import { tableList } from '../../main/redux/actions/tableActions';
 const TableListContainer = () => {
 
     // Consume State from redux
-    const { loading, error, list: tables } = useSelector( state => state.table );
+    const { loading, error, list: tables } = useSelector( state => state.table.tableList );
 
     // Consume action redux to invoke in any component attached
     const dispatch = useDispatch();
