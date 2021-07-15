@@ -1,4 +1,4 @@
-import { Table } from '../../interfaces/Interfaces';
+import { Table } from '../../interfaces';
 import { fetchWithoutToken } from "../../utils/fetch";
 
 export const getTables = async () => {
