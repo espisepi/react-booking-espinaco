@@ -1,6 +1,6 @@
-import { TABLE_LIST_FAIL, TABLE_LIST_REQUEST, TABLE_LIST_SUCCESS } from "../types/tableTypes"
-import * as tableService from '../../services/tableService'
-import { Table } from "../../../interfaces"
+import { TABLE_LIST_FAIL, TABLE_LIST_REQUEST, TABLE_LIST_SUCCESS } from "../../types/tableTypes"
+import * as tableService from '../../../services/tableService'
+import { Table } from "../../../../interfaces"
 import { Dispatch } from "redux"
 
 // Action Creators ----------------------
@@ -36,6 +36,4 @@ export const tableList = () => async(dispatch: Dispatch) => {
     }
 }
 
-
-
-
+export default tableList;

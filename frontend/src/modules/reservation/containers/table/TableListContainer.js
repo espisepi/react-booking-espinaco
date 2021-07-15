@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 // Redux
 import { useSelector, useDispatch } from 'react-redux'
 import TableList from '../../components/table/TableList';
-import { tableList } from '../../main/redux/actions/tableActions';
+import { tableList } from '../../main/redux/actions';
 
 const TableListContainer = () => {
 
